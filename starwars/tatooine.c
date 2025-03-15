@@ -1,3 +1,3 @@
 int numero_abitanti() {
-    return 1000;
+    return 10000;
 }
