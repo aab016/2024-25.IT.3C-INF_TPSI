@@ -13,9 +13,11 @@ gcc -c moon.c > gcc moon.o  > ./a.out
 ## ELF format
 
 ### WHAT
+
 Executable and Linkable Format (ELF, formerly named Extensible Linking Format) is a common standard file format for executable files, **object code**, shared libraries, and core dumps.
 
 ### OBJECT CODE
+
 In computing, object code or object module is the product of an assembler or compiler.
 [...] object code is a sequence of statements or instructions in a computer language, usually a machine code language [...]
 Object files can in turn be linked to form an executable file or library file. In order to be used, object code must either be placed in an executable file, a library file, or an object file.
@@ -58,11 +60,8 @@ Relocatable file: 0x01 @ 0x10 _ET_REL_ as type.
 ```
 NB: 0000 0000 0000 0000 0000 @ 0x18 means _the file doesn't have an associated entry point_, it's not executable!
 
-
-
-
-
 ## gcc PIE
+
 https://stackoverflow.com/a/34522357
 
 It sounds like your GCC is configured to build -pie binaries by default. These binaries really are shared libraries (of type ET_DYN), except they run just like a normal executable would.
